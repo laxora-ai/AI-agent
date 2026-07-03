@@ -1,13 +1,13 @@
 data "archive_file" "agent" {
   type        = "zip"
   source_dir  = "${path.module}/../lambda_src/agent"
-  output_path = "${path.module}/.build/agent.zip"
+  output_path = "${path.module}/agent.zip"
 }
 
 data "archive_file" "waitlist_reactor" {
   type        = "zip"
   source_dir  = "${path.module}/../lambda_src/waitlist_reactor"
-  output_path = "${path.module}/.build/waitlist_reactor.zip"
+  output_path = "${path.module}/waitlist_reactor.zip"
 }
 
 resource "aws_cloudwatch_log_group" "agent" {
