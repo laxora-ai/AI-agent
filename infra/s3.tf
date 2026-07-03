@@ -43,8 +43,4 @@ resource "aws_s3vectors_index" "rag" {
   data_type          = "float32"
   dimension          = var.vector_dimension
   distance_metric    = "cosine"
-
-  metadata_configuration {
-    non_filterable_metadata_keys = ["text"]
-  }
 }
