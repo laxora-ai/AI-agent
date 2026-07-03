@@ -1,0 +1,17 @@
+aws_region  = "us-east-1"
+project_name = "laxora-agent"
+environment  = "dev"
+
+# SES sandbox requires the sender and recipient emails to be verified.
+ses_from_email = ""
+
+# Keep managed Bedrock Guardrails disabled until you create/configure one.
+enable_bedrock_guardrails = false
+bedrock_guardrail_id      = ""
+bedrock_guardrail_version = "DRAFT"
+
+# For local frontend demo during development.
+allowed_cors_origins = [
+  "http://localhost:3000",
+  "http://localhost:5173"
+]
