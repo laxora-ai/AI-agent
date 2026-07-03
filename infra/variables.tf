@@ -41,7 +41,7 @@ variable "lambda_memory_mb" {
 }
 
 variable "allowed_cors_origins" {
-  description = "Origins allowed to call the Lambda Function URL. Use localhost for the POC frontend."
+  description = "Origins allowed by the future API/frontend endpoint."
   type        = list(string)
   default     = ["http://localhost:3000", "http://localhost:5173"]
 }
@@ -86,10 +86,4 @@ variable "bedrock_guardrail_version" {
   description = "Optional Bedrock Guardrail version."
   type        = string
   default     = "DRAFT"
-}
-
-tags = {
-  ManagedBy = "terraform"
-  Project   = var.project_name
-  Env       = var.environment
 }
